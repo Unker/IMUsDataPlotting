@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jfreechart-1.0.19"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jcommon-1.0.23"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jSSC"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/slf4j-1.7.21"/>
+	<classpathentry kind="lib" path="Utils"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/logback-1.1.7"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

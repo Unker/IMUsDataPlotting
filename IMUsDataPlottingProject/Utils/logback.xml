@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false"> <!--отображать внутренний лог или нет-->
+
+    <property file="Utils/variables.properties" />
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+				<pattern>%date %-5level [%thread] - [%logger] [%file:%line] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${destination}</file>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+        <encoder>
+            <pattern>%date %-5level [%thread] - [%logger] [%file:%line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+	
+	<!--appender name="FILE-AUDIT"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${destination}</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%date %-5level [%thread] - [%logger] [%file:%line] - %msg%n
+			</Pattern>
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/debug.%d{yyyy-MM-dd}.%i.log
+                        </fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+	</appender-->
+	
+
+	<!-- logger name="demo.SLF4JConsoleTest" level="INFO" />
+	<logger name="chapters.configuration.Foo" level="DEBUG" /-->
+	
+	
+    <root level="TRACE" >
+        <appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+    </root>
+	
+
+
+	
+</configuration>
